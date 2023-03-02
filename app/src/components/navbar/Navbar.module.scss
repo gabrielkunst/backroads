@@ -1,1 +1,86 @@
 @import "../../Global.scss";
+
+.navbar {
+  height: 7rem;
+  background-color: $bg-dark;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 0 2rem;
+  z-index: 100;
+
+  .navbarLogo {
+    text-align: left;
+    img {
+      width: 150px;
+    }
+  }
+
+  .navbarHamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    flex: 1 1 0%;
+    text-align: right;
+    color: $clr-primary-7;
+  }
+
+  .navbarLinks,
+  .navbarSocials {
+    display: none;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .navbarLinks {
+    flex: 1 1 0%;
+    gap: 4rem;
+
+    a {
+      color: white;
+      font-size: max(1.2rem, 1.1vw);
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+      padding-bottom: 0.1rem;
+      border-bottom: 2px solid transparent;
+      transition: $transition;
+
+      &:hover {
+        border-color: $clr-primary-7;
+        color: $clr-primary-7;
+      }
+    }
+  }
+
+  .navbarSocials {
+    a {
+      font-size: max(2rem, 1.2vw);
+      color: $clr-primary-3;
+      transition: $transition;
+
+      &:hover {
+        color: $clr-primary-7;
+      }
+    }
+  }
+
+  .navbarSocials,
+  .navbarLogo {
+    flex: 0.5 0.5 0%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    .navbarLinks,
+    .navbarSocials {
+      display: flex;
+    }
+    .navbarHamburger {
+      display: none !important;
+    }
+  }
+}

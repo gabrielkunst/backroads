@@ -6,6 +6,7 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   return (
@@ -44,6 +45,9 @@ export default function Navbar() {
           </a>
         </li>
       </ul>
+      <span className={style.navbarHamburger}>
+        <FontAwesomeIcon icon={faBars} />
+      </span>
     </nav>
   );
 }
